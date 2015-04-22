@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-04-13T22:40:53
+# Project created by QtCreator 2015-04-20T05:51:47
 #
 #-------------------------------------------------
 
@@ -18,7 +18,6 @@ TEMPLATE = app
 SOURCES += main.cpp
 
 HEADERS += \
-    Node.h \
     treeADT.h \
-    ImplementaArvore.h \
-    BinNode.h
+    Node.h \
+    ImplementaArvore.h

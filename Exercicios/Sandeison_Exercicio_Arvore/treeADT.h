@@ -1,3 +1,4 @@
+
 #include "Node.h"
 #include <QString>
 
@@ -40,7 +41,7 @@ public:
     
     virtual void addSubTree(Node<E>*& node) = 0;//add sub tree
     
-   //onde tem Node substituir pela classe de você caso nome seja diferente
+//    //onde tem Node substituir pela classe de você caso nome seja diferente
     
     virtual void toLeft() = 0; // Go left
     
