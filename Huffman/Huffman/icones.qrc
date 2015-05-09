@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icones/1431175094_Remove.png</file>
+        <file>Icones/1431175214_Log Out.png</file>
+        <file>Icones/1431175329_Save.png</file>
+        <file>Icones/1431175367_video_compress.png</file>
+        <file>Icones/1431176235_open-file.png</file>
+    </qresource>
+</RCC>

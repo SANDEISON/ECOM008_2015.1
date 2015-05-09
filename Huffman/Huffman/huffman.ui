@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Huffman</class>
+ <widget class="QMainWindow" name="Huffman">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>545</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Huffman</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="lineEdit_Salvar">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Abrir">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>89</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAbrir">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>90</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Abrir</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icones.qrc">
+      <normaloff>:/Icones/1431175214_Log Out.png</normaloff>:/Icones/1431175214_Log Out.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Cancelar">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cancelar</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icones.qrc">
+      <normaloff>:/Icones/1431175094_Remove.png</normaloff>:/Icones/1431175094_Remove.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Descompressao">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>190</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Descompressão</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icones.qrc">
+      <normaloff>:/Icones/1431176235_open-file.png</normaloff>:/Icones/1431176235_open-file.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Compressao">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>190</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compressão</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icones.qrc">
+      <normaloff>:/Icones/1431175367_video_compress.png</normaloff>:/Icones/1431175367_video_compress.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSalvar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>130</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Salvar</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icones.qrc">
+      <normaloff>:/Icones/1431175329_Save.png</normaloff>:/Icones/1431175329_Save.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>   HUFFMAN</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionSalvar"/>
+   <addaction name="actionCompress_o"/>
+   <addaction name="actionDescompress_o"/>
+   <addaction name="actionSair"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>545</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionSalvar"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuHuffman">
+    <property name="title">
+     <string>Huffman</string>
+    </property>
+    <addaction name="actionCompress_o"/>
+    <addaction name="actionDescompress_o"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuHuffman"/>
+  </widget>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Icones/1431175214_Log Out.png</normaloff>:/Icones/1431175214_Log Out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Abrir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Icones/1431175329_Save.png</normaloff>:/Icones/1431175329_Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Salvar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Icones/1431175094_Remove.png</normaloff>:/Icones/1431175094_Remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Cancelar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionCompress_o">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Icones/1431175367_video_compress.png</normaloff>:/Icones/1431175367_video_compress.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compressão</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionDescompress_o">
+   <property name="icon">
+    <iconset resource="icones.qrc">
+     <normaloff>:/Icones/1431176235_open-file.png</normaloff>:/Icones/1431176235_open-file.png</iconset>
+   </property>
+   <property name="text">
+    <string>Descompressão</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icones.qrc"/>
+ </resources>
+ <connections/>
+</ui>
