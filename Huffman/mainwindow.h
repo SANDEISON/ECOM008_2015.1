@@ -1,27 +1,32 @@
-#ifndef HUFFMAN_H
-#define HUFFMAN_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
+#include<compressao.h>
+
 
 
 namespace Ui {
-class Huffman;
+class MainWindow;
 }
 
-class Huffman : public QMainWindow
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Huffman(QWidget *parent = 0);
-    ~Huffman();
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+    // Conexão, envia os endereços do arquivo abrir e do salvar
+    Compressao conexao_compressao;
 
     // Definindo o objeto para salvar o endereço do arquivo
     QString selecionarArquivo;
 
     // Definindo o objeto para salvar o endereço onde o arquivo sera salvo.
     QString salvaArquivo;
-
 
 private slots:
 
@@ -31,16 +36,14 @@ private slots:
     // Botão Salvar
     void on_pushButtonSalvar_clicked();
 
-    //Botão Compressão
-    void on_Compressao_clicked();
-
     // Botão Descompressão
     void on_Descompressao_clicked();
 
+    //Botão Compressão
+    void on_Compressao_clicked();
+
     //Botão Cancela
     void on_Cancelar_clicked();
-
-
 
 // Menu Superior
 
@@ -57,10 +60,10 @@ private slots:
     void on_actionDescompress_o_triggered();
 
     //Botão Sair
-    void on_actionSair_triggered();
+    void on_actionCancelar_triggered();
 
 private:
-    Ui::Huffman *ui;
+    Ui::MainWindow *ui;
 };
 
-#endif // HUFFMAN_H
+#endif // MAINWINDOW_H

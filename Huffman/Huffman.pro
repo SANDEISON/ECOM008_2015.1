@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-05-08T22:51:06
+# Project created by QtCreator 2015-05-11T15:23:08
 #
 #-------------------------------------------------
 
@@ -13,15 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        huffman.cpp \
-    compressao.cpp \
-    descompressao.cpp
+        mainwindow.cpp \
+    compressao.cpp
 
-HEADERS  += huffman.h \
-    compressao.h \
-    descompressao.h
+HEADERS  += mainwindow.h \
+    compressao.h
 
-FORMS    += huffman.ui
+FORMS    += mainwindow.ui
 
 RESOURCES += \
     icones.qrc
