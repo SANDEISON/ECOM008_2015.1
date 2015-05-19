@@ -5,6 +5,10 @@
 #include<QString>
 #include <QFileInfo>
 #include <QFile>
+#include <implementatree.h>
+#include<implementalista.h>
+
+
 
 class Compressao
 {
@@ -38,6 +42,10 @@ public:
 
       // Objeto para copiar o arquivo principal, onde podemos manipular sem perder o dado origianl.
       QByteArray novoArquivo;
+
+      implementaTree<char> Arvore;
+      implementalista<char> Lista;
+
 
 
 };

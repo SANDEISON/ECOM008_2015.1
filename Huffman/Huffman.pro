@@ -14,10 +14,20 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    compressao.cpp
+    compressao.cpp \
+    descompressao.cpp
 
 HEADERS  += mainwindow.h \
-    compressao.h
+    compressao.h \
+    node.h \
+    treeADT.h \
+    sort.h \
+    listadt.h \
+    implementalista.h \
+    implementasort.h \
+    implementatree.h \
+    descompressao.h \
+    nodelist.h
 
 FORMS    += mainwindow.ui
 

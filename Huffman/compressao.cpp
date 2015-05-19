@@ -11,29 +11,26 @@ Compressao::Compressao()
 void Compressao::compress(QString endEntrada,QString endSaida ) {
 
        //Obtem as informações do arquivo de entrada
-         infoArquivoEnt.setFile(endEntrada);
+       infoArquivoEnt.setFile(endEntrada);
 
+       // Verificar se o arquivo existe
+       if (infoArquivoEnt.exists()){
 
-         // Verificar se o arquivo existe
-         if (infoArquivoEnt.exists()){
+           // Nome do Arquivo
+           nomeOriginal = infoArquivoEnt.fileName();
 
-            // Nome do Arquivo
-            nomeOriginal = infoArquivoEnt.fileName();
+           // Tamanho do arquivo
+           tamNomeOriginal = nomeOriginal.size();
 
-            // Tamanho do arquivo
-            tamNomeOriginal = nomeOriginal.size();
+           //Leitura do arquivo
+           leArquivo(endEntrada);
 
-            //Leitura do arquivo
-            leArquivo(endEntrada);
+           qDebug() << "Imformações :" << endl;
+           qDebug() << "Nome do Arquivo Original : " << nomeOriginal <<endl;
+           qDebug() << "Tamanho do Nome : " << tamNomeOriginal << endl;
 
-            qDebug() << "Imformações :" << endl;
-            qDebug() << "Nome do Arquivo Original : " << nomeOriginal <<endl;
-            qDebug() << "Tamanho do Nome : " << tamNomeOriginal << endl;
-
-
-
-            //Frequencia do Arquivo
-            frequencia();
+           //Frequencia do Arquivo
+           frequencia();
 
         }else{
 
@@ -66,34 +63,31 @@ void Compressao::leArquivo(QString endEntrada)
 }
 
 
-
-
-
 // Verifica a frequencia do arquivo
 void Compressao::frequencia(){
     //Frequencia do Arquivo
     int frequencia[256];
 
+    // Contanto a frequencia
     for(int i = 0; i < 256; i++){
         frequencia[i] = novoArquivo.count(i);
      }
 
-    qDebug() << "Frequencia : "<<endl;
 
+
+    // Contanto a frequencia
     for(int i = 0; i < 256; i++){
+        if (frequencia[i] != 0){
 
-        if (frequencia[i]!= 0 ){
-            qDebug() << i << " : "<< frequencia[i] << endl;
+            Arvore.add(i);
         }
 
     }
 
+     Arvore.show();
+
+
 }
-
-
-
-
-
 
 //Exibe as mensagens
 void Compressao::showMensagem(const char * msg)
